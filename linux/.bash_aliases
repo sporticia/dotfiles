@@ -26,4 +26,4 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias xip='dig +short myip.opendns.com @resolver1.opendns.com'
