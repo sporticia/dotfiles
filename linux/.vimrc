@@ -12,3 +12,4 @@ set softtabstop=2
 set tabstop=2
 set autoindent sw=2
 set novisualbell
+set encoding=utf-8
