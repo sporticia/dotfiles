@@ -1,0 +1,28 @@
+[user]
+	email = scott@sporticia.com
+	name = Scott Brewerton
+	signingkey = 972C44B8A8DC64A3
+[core]
+	editor = "code --wait"
+	excludesfile = ~/.gitignore
+	autocrlf = false
+[credential "https://github.com/sporticia"]
+	helper = manager
+	username = scott
+[color]
+	ui = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff]
+    tool = diff
+[difftool "diff"]
+    cmd = /usr/bin/diff \"$LOCAL\" \"$REMOTE\"
+[alias]
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  lg = !"git lg1"
+[commit]
+	gpgsign = true
