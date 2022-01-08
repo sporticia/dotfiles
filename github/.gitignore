@@ -546,3 +546,7 @@ build-iPhoneSimulator/
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# Do not push secrets to Github
+**/secrets*
+**/.dockerconfigjson
