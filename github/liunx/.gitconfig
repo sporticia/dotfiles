@@ -26,3 +26,5 @@
   lg = !"git lg1"
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main

@@ -11,7 +11,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias tf1229='ln -f -s /home/scott/terraform/terraform1229 /home/scott/terraform/terraform'
     alias tf134='ln -f -s /home/scott/terraform/terraform134 /home/scott/terraform/terraform'
     alias tf135='ln -f -s /home/scott/terraform/terraform135 /home/scott/terraform/terraform'
-    alias work='cd /c/Repos/Work'
+    alias work='cd ~/Work'
     alias nmap='"/c/Program Files (x86)/Nmap/nmap.exe"'
     #alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
