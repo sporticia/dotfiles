@@ -1,2 +1,7 @@
 alias ls='ls -aF'
-
+alias ll='ls alF'
+alias xip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias awslogon='saml2aws login -a and'
+alias tf='terraform version'
+alias k='kubectl'
+alias ctx='kubectx'
