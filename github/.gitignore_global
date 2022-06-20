@@ -4,6 +4,7 @@
 ### Global
 # Log files
 *.[Ll]og
+.dccache
 
 ### Windows
 # Windows thumbnail cache files

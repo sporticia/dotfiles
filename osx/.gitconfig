@@ -1,0 +1,7 @@
+[user]
+  name = Scott Brewerton
+	email = scott.brewerton@and.digital
+[core]
+	excludesfile = /Users/scottbrewerton/.gitignore_global
+[init]
+	defaultBranch = main

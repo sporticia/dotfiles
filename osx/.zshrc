@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Reuse same zcompdump file each time
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch arm64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -109,16 +110,27 @@ source ~/.aliases
 # Setup gpg tty
 export GPG_TTY=$(tty)
 
-# Add home binaries path
-#export PATH="$HOME/.bin:$PATH"
-
 # Recommended by brew doctor
-export PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:/usr/local/sbin:/opt/homebrew/bin:$PATH"
+eval "$(brew shellenv)"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-eval "$(rbenv init - --no-rehash)"
+# Export default AWS_PROFILE
+# export AWS_PROFILE=and
+export AWS_PROFILE=sporticia
 
-# Export and AWS_PROFILE
-export AWS_PROFILE=and
+# Setup golang
+export GOPATH=$HOME/go
+export GOROOT="/opt/homebrew/opt/go/libexec"
+export PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
+
+# Load rbenv if available
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh --no-rehash)"
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/scottbrewerton/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

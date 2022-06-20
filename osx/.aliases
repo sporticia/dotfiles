@@ -5,3 +5,11 @@ alias awslogon='saml2aws login -a and'
 alias tf='terraform version'
 alias k='kubectl'
 alias ctx='kubectx'
+
+# alias for arm brew vs intel brew
+alias abrew='/opt/homebrew/bin/brew'
+alias ibrew='/usr/local/Homebrew/bin/brew'
+alias brew='/opt/homebrew/bin/brew'
+
+# alias for snowflake SQL CLI client
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
