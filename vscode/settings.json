@@ -2,6 +2,8 @@
   "azurermtools.enableTelemetry": false,
   "csharp.suppressDotnetRestoreNotification": true,
   "debug.toolBarLocation": "docked",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.codeLens": false,
   "editor.detectIndentation": false,
@@ -14,12 +16,15 @@
   "editor.renderControlCharacters": true,
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
   "explorer.openEditors.visible": 0,
   "files.defaultLanguage": "powershell",
-	"files.trimTrailingWhitespace": true,
-	"[markdown]": {
-		"files.trimTrailingWhitespace": false
-	},
+  "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+	    "files.trimTrailingWhitespace": false
+    },
+  "git.autoRepositoryDetection": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -32,33 +37,17 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
+  "gitlens.advanced.abbreviatedShaLength": 10,
   "gitlens.keymap": "alternate",
+  "search.useGlobalIgnoreFiles": true,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.rendererType": "canvas",
   "terminal.integrated.rightClickBehavior": "copyPaste",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "powershell.codeFormatting.preset": "Allman",
-  "powershell.powerShellDefaultVersion": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-  "shellLauncher.shells.windows": [
-    {
-    "shell": "c:\\Program Files\\PowerShell\\6\\pwsh.exe",
-    "label": "PowerShell Core"
-    },
-    {
-    "shell": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "label": "Windows PowerShell"
-    }
-  ],
   "window.restoreWindows": "folders",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Darker Dark Theme",
-  "search.useGlobalIgnoreFiles": true,
-  "gitlens.advanced.abbreviatedShaLength": 10,
-  "git.autoRepositoryDetection": false,
-  "explorer.confirmDelete": false,
+  "workbench.colorTheme": false,
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
@@ -71,7 +60,9 @@
   "terraform.languageServer": {
     "enabled": true,
     "args": []
-},
-"window.zoomLevel": 0,
-"editor.tabSize": 2
+  },
+  "terraform.languageServer.ignoreSingleFileWarning": true,
+  "window.zoomLevel": 0
+
+
 }
