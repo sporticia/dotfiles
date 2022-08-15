@@ -4,6 +4,7 @@
 ### Global
 # Log files
 *.[Ll]og
+.dccache
 
 ### Windows
 # Windows thumbnail cache files
@@ -29,13 +30,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-### MS SQL
-# SQL data files
-*.mdf
-
-# SQL transaction log files
-*.ldf
 
 ### Mac
 .DS_Store

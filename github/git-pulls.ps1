@@ -1,5 +1,5 @@
 $repos = @()
-$repos = @(Get-ChildItem -Path "C:\Repos\Repos\github\sporticia" | ?{ $_.PSIsContainer })
+$repos = @(Get-ChildItem -Path "C:\Repos\Repos\github\sporticia" | Were-Object { $_.PSIsContainer })
 ForEach ($repo in $repos)
 {
 	Set-Location -Path "C:\Repos\Repos\github\sporticia\$($repo.Name)"

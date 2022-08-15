@@ -1,15 +1,44 @@
-alias ls='ls -aF'
-alias ll='ls alF'
-alias xip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias awslogon='saml2aws login -a and'
-alias tf='terraform version'
-alias k='kubectl'
-alias ctx='kubectx'
+# Navigation
+alias ~="cd ~"
+alias home"cd ~"
+alias ..="cd .."
+alias ls="ls -aF"
+alias ll="ls alF"
+alias repo="cd ~/repos"
+alias repos="cd ~/repos"
 
-# alias for arm brew vs intel brew
-alias abrew='/opt/homebrew/bin/brew'
-alias ibrew='/usr/local/Homebrew/bin/brew'
-alias brew='/opt/homebrew/bin/brew'
+# DNS
+alias xip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias flush='dscacheutil -flushcache'
 
-# alias for snowflake SQL CLI client
+# Reload .zshrc
+alias zreload="source $HOME/.zshrc"
+
+# AWS
+alias awslogon="saml2aws login -a and"
+
+# Kubernetes
+alias k="kubectl $@"
+alias ctx="kubectx"
+
+# Terraform
+alias tf="terraform version"
+
+# Docker
+alias d="docker"
+alias dps= "docker ps"
+
+# ARM brew vs Intel brew
+alias abrew="/opt/homebrew/bin/brew"
+alias ibrew="/usr/local/Homebrew/bin/brew"
+alias brew="/opt/homebrew/bin/brew"
+
+# Snowflake SQL CLI client
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+
+# Markdown files
+alias -s md=code
+
+# JSON files
+alias -s json=code
