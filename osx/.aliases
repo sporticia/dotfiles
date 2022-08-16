@@ -1,6 +1,6 @@
 # Navigation
 alias ~="cd ~"
-alias home"cd ~"
+alias home="cd ~"
 alias ..="cd .."
 alias ls="ls -aF"
 alias ll="ls alF"
