@@ -5,3 +5,5 @@
   excludesfile = /Users/scottbrewerton/.gitignore_global
 [init]
   defaultBranch = main
+[push]
+  autoSetupRemote = true
