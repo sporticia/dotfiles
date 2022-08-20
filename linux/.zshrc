@@ -116,7 +116,7 @@ compinit
 export DISPLAY=:0
 
 # Import aliases
-source ~/.bash_aliases
+source ~/.aliases
 
 # Set and export GPG device
 GPG_TTY=$(tty)
