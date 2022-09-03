@@ -23,6 +23,8 @@ alias ctx="kubectx"
 
 # Terraform
 alias tf="terraform version"
+alias t="terraform"
+alias fmt="find ./ -type f -maxdepth 5 -iname '*.tf' -exec terraform fmt "{}" \;"
 
 # Docker
 alias d="docker"
