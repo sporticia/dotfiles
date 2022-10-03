@@ -1,0 +1,37 @@
+# Job to manage the ???? environment lifecycle
+# This job should auto create and destroy the ???? non-prod environment on a dialy weekday basis
+# Create  = Mon-Fri 09:15 UTC
+# Destroy = Mon-Fri 17:00 UTC
+# If you modify the cron times for this workflow, you will need to manully re-run it once from the actions section to update the job(s) on Github
+
+# NOTE: These times are UTC and there is no way to specify another timezone
+# So for the UK, it will be GMT +1 during summer dyalight savings, and GMT +0 during winter months
+
+name: "env-lifecycle"
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Create MWAA env at 09:15 Mon - Fri
+    - cron: '15 9 * * 1-5'
+    # Destroy MWAA env at 17:00 Mon - Fri
+    - cron: '0 15 * * 1-5'
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    environment: production
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Output date and time for logs
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d-%H-%M')"
