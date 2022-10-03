@@ -35,3 +35,6 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d-%H-%M')"
+      - name: Print current date
+        id: date-print
+        run: echo "Current date is ---- ${{ steps.date.outputs.date }}"
