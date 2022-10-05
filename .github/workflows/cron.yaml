@@ -11,11 +11,11 @@ name: "env-lifecycle"
 
 on:
   workflow_dispatch:
-  schedule:
-    # Create MWAA env at 09:15 Mon - Fri
-    - cron: '15 9 * * 1-5'
-    # Destroy MWAA env at 17:00 Mon - Fri
-    - cron: '0 15 * * 1-5'
+  #schedule:
+  #  # Create MWAA env at 09:15 Mon - Fri
+  #  - cron: '15 9 * * 1-5'
+  #  # Destroy MWAA env at 17:00 Mon - Fri
+  #  - cron: '0 15 * * 1-5'
 
 jobs:
   terraform:
