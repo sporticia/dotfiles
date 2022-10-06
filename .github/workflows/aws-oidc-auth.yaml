@@ -1,16 +1,24 @@
+# AWS OIDC auth workflow
+
 name: "aws-oidc-auth"
+
+on:
+  workflow_call:
+
 permissions:
   id-token: write # required to use OIDC authentication
   contents: read # required to checkout the code from the repo
+
 jobs:
   build:
-  runs-on: ubuntu-latest
-steps:
-  - name: configure AWS credentials
-    uses: aws-actions/configure-aws-credentials@v1
-  with:
-    role-to-assume: arn:aws:iam::137502009769:role/github-oidc
-    role-duration-seconds: 600
-    aws-region: eu-west-2
-  - name: Test AWS Creds
-    run: aws sts get-caller-identity
+    runs-on: ubuntu-latest
+    steps:
+      - name: configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::137502009769:role/github-oidc
+          role-duration-seconds: 600
+          aws-region: eu-west-2
+
+      - name: Test AWS Creds
+        run: aws sts get-caller-identity
