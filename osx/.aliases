@@ -11,6 +11,9 @@ alias repos="cd ~/repos"
 alias xip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias flush='dscacheutil -flushcache'
 
+# Networking
+alias ip4table="netstat -nr | sed -e '1,3d;/Internet6:/,$d;/^$/d'"
+
 # Reload .zshrc
 alias zreload="source $HOME/.zshrc"
 
