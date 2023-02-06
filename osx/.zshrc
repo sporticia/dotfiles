@@ -112,11 +112,15 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
 # Setup gpg tty
-export GPG_TTY=$(tty)
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # Export default AWS_PROFILE
-# export AWS_PROFILE=and
-export AWS_PROFILE=sporticia
+# export AWS_PROFILE=profile
+export AWS_PROFILE=profile
+
+# Set apacxhe airflow location
+export AIRFLOW_HOME=~/airflow
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/scottbrewerton/.rd/bin:$PATH"

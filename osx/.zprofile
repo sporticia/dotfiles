@@ -22,3 +22,6 @@ export PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
 # Load rbenv if available
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
+
+# Add Rancher to path
+export PATH="~/.rd/bin:$PATH"
