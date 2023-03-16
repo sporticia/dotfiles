@@ -14,6 +14,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # Disable annoying AWS CLI cli-pager behaviour
 export AWS_PAGER=''
 
+# Don't clear the console when using pager/less
+export LESS=-iXFR
+
 # Setup golang
 export GOPATH=$HOME/go
 export GOROOT="/opt/homebrew/opt/go/libexec"
