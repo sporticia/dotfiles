@@ -44,3 +44,4 @@ PATH=$PATH:/home/scott/.tfenv/bin
 export TERM=xterm-256color
 export EDITOR=vi
 export K9S_EDITOR=vi
+export LESS=-iXFR
