@@ -26,5 +26,8 @@ export PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
 
+# Expose kube config
+export KUBECONFIG=~/.kube/config
+
 # Add Rancher to path
 export PATH="~/.rd/bin:$PATH"
