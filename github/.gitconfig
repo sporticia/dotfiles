@@ -34,6 +34,7 @@
   pul = 'pull'
   unstage = 'reset HEAD --'
   last = 'log -1 HEAD'
+  slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
   
 [difftool "sourcetree"]
   md = opendiff \"$LOCAL\" \"$REMOTE\"
