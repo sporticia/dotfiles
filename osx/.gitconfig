@@ -3,7 +3,45 @@
   email = scott.brewerton@work.com
 [core]
   excludesfile = /Users/scottbrewerton/.gitignore_global
+  editor = /usr/bin/vi -f
+  pager = less
+
 [init]
   defaultBranch = main
+
+[commit]
+  gpgsign = false
+
+[fetch]
+  prune = true
+
 [push]
   autoSetupRemote = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
+  trustExitCode = true
+
+[alias]
+  s = 'status'
+  empty = 'git commit --allow-empty'
+  pul = 'pull'
+  unstage = 'reset HEAD --'
+  last = 'log -1 HEAD'
+  slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
+  
+[difftool "sourcetree"]
+  md = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
+
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
+  trustExitCode = true
+
+[pager]
+  branch = false
+  status = false
