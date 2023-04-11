@@ -8,6 +8,9 @@ export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 # added by Snowflake SnowCD installer
 export PATH=/opt/snowflake/snowcd:$PATH
 
+# Add kubescape scanner
+export PATH=$PATH:/Users/scottbrewerton/.kubescape/bin
+
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
