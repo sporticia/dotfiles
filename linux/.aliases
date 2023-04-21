@@ -48,8 +48,8 @@ alias flush='dscacheutil -flushcache'
 alias awslogon="saml2aws login -a and"
 
 # Git
-alias one='github one'
-alias slog='github slog'
+alias one='git one'
+alias slog='git slog'
 
 # Kubernetes
 alias k="kubectl $@"
