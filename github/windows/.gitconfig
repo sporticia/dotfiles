@@ -2,33 +2,58 @@
   email = scott@sporticia.com
   name = Scott Brewerton
   signingkey = 972C44B8A8DC64A3
+
 [core]
   editor = \"C:\\Program Files\\Microsoft VS Code\\Code.exe\" --wait
   excludesfile = ~/.gitignore
   autocrlf = false
+
+[init]
+  defaultBranch = main
+
+[commit]
+  gpgsign = true
+
+[fetch]
+  prune = true
+
+[push]
+  autoSetupRemote = true
+
 [credential "https://github.com/sporticia"]
   helper = manager
   username = scott
+
 [color]
   ui = true
+
 [filter "lfs"]
   process = git-lfs filter-process
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
+
 [diff]
-    tool = winmerge
+  tool = winmerge
+
 [difftool "winmerge"]
-    cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
+  cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
+
 [winUpdater]
   recentlySeenVersion = 2.25.0.windows.1
+
 [alias]
   lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   lg = !"git lg1"
-[commit]
-  gpgsign = true
-[init]
-  defaultBranch = main
-[push]
-  autoSetupRemote = true
+  s = 'status'
+  empty = 'git commit --allow-empty'
+  pul = 'pull'
+  unstage = 'reset HEAD --'
+  last = 'log -1 HEAD'
+  slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
+  one = log --graph --decorate --pretty=oneline --abbrev-commit
+
+[pager]
+  branch = false
+  status = false
