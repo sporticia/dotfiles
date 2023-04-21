@@ -28,3 +28,47 @@ alias la='ls -A'
 alias l='ls -CF'
 alias xip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias ctx='kubectx'
+
+# Navigation
+alias ~="cd ~"
+alias home="cd ~"
+alias ..="cd .."
+alias ls="ls -aF"
+alias ll="ls alF"
+alias repo="cd ~/repos"
+alias repos="cd ~/repos"
+
+# DNS
+alias xip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias flush='dscacheutil -flushcache'
+
+# Networking
+
+# AWS
+alias awslogon="saml2aws login -a and"
+
+# Git
+alias one='github one'
+alias slog='github slog'
+
+# Kubernetes
+alias k="kubectl $@"
+alias ctx="kubectx"
+
+# Terraform
+alias tf="terraform version"
+alias t="terraform"
+alias fmt="find ./ -type f -maxdepth 9 -iname '*.tf' -exec terraform fmt "{}" \;"
+
+# Docker
+alias d="docker"
+alias dps= "docker ps"
+
+# Snowflake SQL CLI client
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+# Markdown files
+alias -s md=code
+
+# JSON files
+alias -s json=code
