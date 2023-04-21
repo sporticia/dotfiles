@@ -35,6 +35,7 @@
   unstage = 'reset HEAD --'
   last = 'log -1 HEAD'
   slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
+  one = log --graph --decorate --pretty=oneline --abbrev-commit
   
 [difftool "sourcetree"]
   md = opendiff \"$LOCAL\" \"$REMOTE\"
