@@ -37,4 +37,4 @@ eval "$(rbenv init - zsh --no-rehash)"
 export KUBECONFIG=~/.kube/config
 
 # Add Rancher to path
-export PATH="~/.rd/bin:$PATH"
+export PATH=~/.rd/bin:"$PATH"
