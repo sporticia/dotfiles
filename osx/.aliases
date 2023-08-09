@@ -6,6 +6,7 @@ alias ls="ls -aF"
 alias ll="ls alF"
 alias repo="cd ~/repos"
 alias repos="cd ~/repos"
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # DNS
 alias xip="dig +short myip.opendns.com @resolver1.opendns.com"
