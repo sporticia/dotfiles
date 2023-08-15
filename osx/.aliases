@@ -41,6 +41,7 @@ alias dps= "docker ps"
 alias abrew="/opt/homebrew/bin/brew"
 alias ibrew="/usr/local/Homebrew/bin/brew"
 alias brew="/opt/homebrew/bin/brew"
+alias cask="abrew outdated --cask --greedy"
 
 # Snowflake SQL CLI client
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
