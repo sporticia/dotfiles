@@ -28,6 +28,10 @@
   cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
   trustExitCode = true
 
+[pager]
+  branch = false
+  status = false
+
 [alias]
   s = 'status'
   empty = 'git commit --allow-empty'
@@ -36,15 +40,3 @@
   last = 'log -1 HEAD'
   slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
   one = log --graph --decorate --pretty=oneline --abbrev-commit
-  
-[difftool "sourcetree"]
-  md = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-
-[mergetool "sourcetree"]
-  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
-  trustExitCode = true
-
-[pager]
-  branch = false
-  status = false
