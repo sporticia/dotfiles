@@ -14,6 +14,9 @@ export PATH=$PATH:/Users/scottbrewerton/.kubescape/bin
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# Set lang encoding
+export LANG=en_US.UTF-8
+
 # Disable Azure Functions telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
