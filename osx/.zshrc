@@ -8,6 +8,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Reuse same zcompdump file each time
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
+# Set history file
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=100000
+export HISTFILESIZE=1000000
+
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
