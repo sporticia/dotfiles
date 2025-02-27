@@ -8,17 +8,33 @@
   editor = vi
   pager = less
 
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = version:refname
+
 [init]
   defaultBranch = main
 
 [commit]
   gpgsign = false
 
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+
 [fetch]
   prune = true
+  pruneTags = true
+  all = true
 
-[push]
-  autoSetupRemote = true
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
