@@ -1,9 +1,12 @@
 {
+  "azure.resourceFilter": [],
   "azurermtools.enableTelemetry": false,
+  "checkov.disableErrorMessage": true,
   "csharp.suppressDotnetRestoreNotification": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
+  "diffEditor.wordWrap": "off",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.codeLens": false,
   "editor.detectIndentation": false,
@@ -20,10 +23,11 @@
   "explorer.confirmDelete": false,
   "explorer.openEditors.visible": 0,
   "files.defaultLanguage": "powershell",
+  "files.exclude": {
+    "**/.git": false,
+    "*/.?": true
+  },
   "files.trimTrailingWhitespace": true,
-    "[markdown]": {
-	    "files.trimTrailingWhitespace": false
-    },
   "git.autoRepositoryDetection": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -39,6 +43,10 @@
   },
   "gitlens.advanced.abbreviatedShaLength": 10,
   "gitlens.keymap": "alternate",
+  "markdown.extension.print.theme": "dark",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
   "search.useGlobalIgnoreFiles": true,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.rendererType": "canvas",
@@ -48,6 +56,8 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": false,
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.dragToOpenWindow": false,
   "terraform.indexing": {
     "enabled": false,
     "liveIndexing": false,
@@ -63,6 +73,4 @@
   },
   "terraform.languageServer.ignoreSingleFileWarning": true,
   "window.zoomLevel": 0
-
-
 }

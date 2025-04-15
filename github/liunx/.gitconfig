@@ -39,14 +39,20 @@
 [difftool "diff"]
     cmd = /usr/bin/diff \"$LOCAL\" \"$REMOTE\"
 
+[pager]
+  branch = false
+  status = false
+
 [alias]
   lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   lg = !"git lg1"
-   s = 'status'
-  empty = 'git commit --allow-empty'
+  s = 'status'
+  rerun = 'git commit --allow-empty'
   pul = 'pull'
   unstage = 'reset HEAD --'
   last = 'log -1 HEAD'
   slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
   one = log --graph --decorate --pretty=oneline --abbrev-commit
+  when = log --pretty='format:%h %ai %s%d (%an)' --diff-filter=A -- $1
+  rprune = 'fetch --prune'

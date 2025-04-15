@@ -58,7 +58,8 @@ alias ctx="kubectx"
 # Terraform
 alias tf="terraform version"
 alias t="terraform"
-alias fmt="find ./ -type f -maxdepth 9 -iname '*.tf' -exec terraform fmt "{}" \;"
+#alias fmt="find ./ -type f -maxdepth 9 -iname '*.tf' -exec terraform fmt "{}" \;"
+alias fmt="find -E ./ -type f -maxdepth 9 -regex '.*\.(tf|tfvars)' -exec terraform fmt "{}" \;"
 
 # Docker
 alias d="docker"
