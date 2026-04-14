@@ -57,3 +57,5 @@
   slog = log --graph --all --topo-order --pretty='format:%h %ai %s%d (%an)'
   one = log --graph --decorate --pretty=oneline --abbrev-commit
   when = log --pretty='format:%h %ai %s%d (%an)' --diff-filter=A -- $1
+  rprune = fetch --prune origin
+  churn = git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20
