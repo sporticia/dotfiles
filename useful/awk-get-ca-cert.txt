@@ -1,0 +1,12 @@
+openssl s_client -showcerts -verify 5 -connect google.com:443 2> /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/) {a++}; out="cert"a".pem"; print >out}'
+
+touch /tmp/dummy.pem && cat /tmp/*.pem > ./ca-certificates.crt
+
+touch /tmp/dummy.pem && cat /tmp/*.pem > /etc/ssl/certs/ca-certificates.crt
+
+
+
+openssl s_client -showcerts -verify 5 -connect google.com:443 2> /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/) {a++}; {print} }'
+
+
+openssl s_client -showcerts -verify 5 -connect google.com:443 < /dev/null | awk '/BEGIN CERTIFICATE/,/END CERTIFICATE/{ if(/BEGIN CERTIFICATE/) {a++};  out="cert"a".pem"; print >out}'
