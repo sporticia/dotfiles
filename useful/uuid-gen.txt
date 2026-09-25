@@ -1,0 +1,6 @@
+# Create random string of length x (where -c is number of chars to use from output)
+uuidgen | tr -d - | tr '[:upper:]' '[:lower:]' | cut -c1-10
+
+# Use as var (example: S3 bucket)
+echo "Bucket Name: sjb-bucket-prd-$AWS_ACCOUNT_ID-$(uuidgen | tr -d - | tr '[:upper:]' '[:lower:]' | cut -c1-10 )"
+
